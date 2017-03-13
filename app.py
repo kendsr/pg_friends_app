@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 import psycopg2
 
 app = Flask(__name__)
+## Change friend:app to appropriate user/password
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://friend:app@localhost:5432/friends_app'
 db = SQLAlchemy(app)
 title='PG Friends App'
