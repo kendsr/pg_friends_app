@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 import psycopg2
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://kendsr:need2not@localhost:5432/friends_app'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://friend:app@localhost:5432/friends_app'
 db = SQLAlchemy(app)
 title='PG Friends App'
 
@@ -79,4 +79,4 @@ def delete_friend(id):
     return redirect('/friends')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
