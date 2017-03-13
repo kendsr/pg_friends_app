@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center">Update Friend</h1>
+        <div style="width: 30%; margin: 25px auto;">
+        <form action="/friends/update/{{ friend.id}}" method="POST">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" name="name" value="{{ friend.name}}">
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="text" name="email" value="{{ friend.email}}">
+            </div>
+                <label>Comments</label>
+                <textarea name="comments">{{ friend.comments}}</textarea>
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+        <a href="/friends">Go Back</a>
+    </div>
+</div>
+
+{% endblock %}

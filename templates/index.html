@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+    <header class="jumbotron">
+         <div class="container">
+             <h1 style="text-align: center">Your Friends!</h1>
+             <p style="text-align: center">a place to keep your friends</p>
+             <p style="text-align: center">
+                <a class="btn btn-primary btn-lg" href="/friends/new">Add New Friend</a>
+             </p>
+         </div>
+     </header>
+     {% if friends: %}
+        {% for friend in friends %}
+            <p>	 
+            <a href="/friends/{{ friend.id }}">{{ friend.name }}</a>
+            {{ friend.email }}</p>
+        {% endfor %}
+    {% else: %}
+        <p>No Friends??</p>
+    {% endif %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class='container'>
+    <div class="row">
+        <h1 style="text-align: center">Show Friend</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <p>Name:{{friend.name}}</br> Email:{{friend.email}}</br> Comments: {{friend.comments}}</p>
+            <a class="btn btn-link" href="/friends/edit/{{ friend.id }}">Edit</a>
+              <a class="btn btn-link" href="/friends/delete/{{ friend.id }}">Delete</a>
+            <a class="btn btn-link" href="/friends">Go Back</a></p>
+        </div>
+    </div>
+
+{% endblock %}
