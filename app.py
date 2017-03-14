@@ -69,7 +69,7 @@ def update_friend(id):
     friend.email = request.form['email']
     friend.comments = request.form['comments']
     db.session.commit()
-    return redirect('/friends')
+    return redirect('/friends/' +  str(id))
 
 # DELETE friend
 @app.route('/friends/delete/<int:id>')
